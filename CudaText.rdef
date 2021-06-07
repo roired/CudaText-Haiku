@@ -1,0 +1,54 @@
+/*--------------------------------------------------------------------
+	Change the value in quotes to match the signature passed
+	to the BApplication constructor by your program.
+--------------------------------------------------------------------*/
+resource app_signature "application/x-vnd.Alexey-T.CudaText";
+
+/*--------------------------------------------------------------------
+	Value for app flags can be B_SINGLE_LAUNCH, B_MULTIPLE_LAUNCH, or
+	B_EXCLUSIVE_LAUNCH.
+
+	Additionally, you may also add the B_BACKGROUND_APP or
+	B_ARGV_ONLY flags via a pipe symbol, such as the following:
+	B_SINGLE_LAUNCH | B_BACKGROUND_APP
+
+	B_SINGLE_LAUNCH is the normal OS behavior
+--------------------------------------------------------------------*/
+resource app_flags B_SINGLE_LAUNCH;
+
+/*--------------------------------------------------------------------
+	Set the version information about your app here.
+	The variety can be set to one of the following values
+	B_APPV_DEVELOPMENT,
+	B_APPV_ALPHA,
+	B_APPV_BETA,
+	B_APPV_GAMMA,
+	B_APPV_GOLDEN_MASTER,
+	B_APPV_FINAL
+--------------------------------------------------------------------*/
+resource app_version {
+	major  = 1,
+	middle = 133,
+	minor  = 5,
+
+	variety = B_APPV_BETA,
+	internal = 0,
+
+	short_info = "CudaText, the Cross Platform text editor",
+	long_info = "CudaText is a cross-platform text editor, written in Object Pascal. It is open source project and can be used free of charge, even for business. It starts quite fast: ~0.3 sec with ~30 plugins, on Linux on CPU Intel Core i3 3Hz. It is extensible by Python add-ons: plugins, linters, code tree parsers, external tools. Syntax parser is feature-rich, based on EControl engine (though not as fast as in some competitors). \n \n Features \n * Syntax highlight for lot of languages (250+ lexers). \n * Code tree: structure of functions/classes/etc, if lexer allows it. \n * Code folding. \n * Multi-carets and multi-selections. \n * Find/Replace with regular expressions. \n * Configs in JSON format. Including lexer-specific configs. \n * Tabbed UI. \n * Split view to primary/secondary. Split window to 2/3/4/6 groups of tabs. \n * Command palette, with fuzzy matching. \n * Minimap. Micromap. \n * Show unprinted whitespace. \n * Support for many encodings. \n * Customizable hotkeys. \n * Binary/Hex viewer for files of unlimited size (can show 10 Gb logs). \n * Correctly saves binary files."
+};
+
+
+resource vector_icon array {
+    $"6E6369660503787A750401C90401C9020012023FE5363BA2BBBBA2BB3FE53646"
+	$"06F0C5379500FFD2FFFF0003F8A12E060206422349233A2322372332213A2340"
+	$"223E2442405E395E475E594558475A435A3C5A3E5A3A0604BF415F395F495F5E"
+	$"4D5C5160495F3E6145CB53BC3E55340605F703425D455D405D574E4B4B4E5247"
+	$"593BC982BD8E5A3C5A435B40594606057E032338233E233B2341415E3E60C07A"
+	$"CB7B583149BCF352B758C0980610AEEBEBBA432C3D2B3F2ABE6CB772BD8BB7FC"
+	$"B9E8BA462F38B8E2BBB8B909BD1AB98DBE393D49434B3E4BC2964B503F4F4151"
+	$"3D4F394644424545453F453E43363B3537353935353734060BEAAA2B442F4C38"
+	$"473E4240454040403E3D39373C34413A433CC0A9BDDF443D48384131070A0101"
+	$"01000A000100000A010102000A030103000A0201001001178200040A04010400"
+	$"0A04010500"
+	};
