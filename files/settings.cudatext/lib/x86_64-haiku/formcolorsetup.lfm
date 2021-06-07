@@ -1,0 +1,164 @@
+object fmColorSetup: TfmColorSetup
+  Left = 450
+  Height = 529
+  Top = 186
+  Width = 558
+  BorderIcons = [biSystemMenu]
+  Caption = 'Color theme'
+  ClientHeight = 529
+  ClientWidth = 558
+  Constraints.MinHeight = 200
+  Constraints.MinWidth = 200
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poMainFormCenter
+  ShowInTaskBar = stNever
+  LCLVersion = '2.1.0.0'
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 29
+    Top = 494
+    Width = 546
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    OKButton.OnClick = OKButtonClick
+    HelpButton.Name = 'HelpButton'
+    HelpButton.Caption = '&Apply'
+    HelpButton.OnClick = HelpButtonClick
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 0
+    ShowButtons = [pbOK, pbCancel, pbHelp]
+    ShowBevel = False
+  end
+  object PanelUi: TPanel
+    Left = 56
+    Height = 242
+    Top = 0
+    Width = 520
+    BevelOuter = bvNone
+    ClientHeight = 242
+    ClientWidth = 520
+    TabOrder = 1
+    object List: TColorListBox
+      AnchorSideRight.Control = bChange
+      Left = 6
+      Height = 230
+      Top = 6
+      Width = 392
+      ColorRectWidth = 32
+      ColorRectOffset = 1
+      NoneColorColor = clNone
+      Style = [cbStandardColors, cbExtendedColors, cbSystemColors, cbPrettyNames]
+      Align = alLeft
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Around = 6
+      ItemHeight = 0
+      OnKeyDown = ListKeyDown
+      OnSelectionChange = ListSelectionChange
+      TabOrder = 0
+    end
+    object bChange: TButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideRight.Control = PanelUi
+      AnchorSideRight.Side = asrBottom
+      Left = 404
+      Height = 29
+      Top = 120
+      Width = 110
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Around = 6
+      Caption = '&Change color...'
+      OnClick = bChangeClick
+      TabOrder = 1
+    end
+    object bNone: TButton
+      AnchorSideLeft.Control = bChange
+      AnchorSideTop.Control = bChange
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = bChange
+      AnchorSideRight.Side = asrBottom
+      Left = 404
+      Height = 29
+      Top = 155
+      Width = 110
+      Anchors = [akTop, akLeft, akRight]
+      AutoSize = True
+      Caption = 'Set "&none color"'
+      OnClick = bNoneClick
+      TabOrder = 2
+    end
+  end
+  object PanelSyntax: TPanel
+    Left = 32
+    Height = 194
+    Top = 200
+    Width = 538
+    BevelOuter = bvNone
+    ClientHeight = 194
+    ClientWidth = 538
+    TabOrder = 2
+    object ListStyles: TListBox
+      AnchorSideRight.Control = bStyle
+      Left = 6
+      Height = 182
+      Top = 6
+      Width = 418
+      Align = alLeft
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Around = 6
+      ItemHeight = 0
+      OnDrawItem = ListStylesDrawItem
+      ScrollWidth = 416
+      Style = lbOwnerDrawFixed
+      TabOrder = 0
+      TopIndex = -1
+    end
+    object bStyle: TButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideRight.Control = PanelSyntax
+      AnchorSideRight.Side = asrBottom
+      Left = 430
+      Height = 29
+      Top = 136
+      Width = 102
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Around = 6
+      Caption = '&Config style...'
+      OnClick = bStyleClick
+      TabOrder = 1
+    end
+  end
+  object ColorDialog1: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    Left = 112
+    Top = 472
+  end
+end
