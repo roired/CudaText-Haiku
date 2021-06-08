@@ -1,0 +1,19 @@
+name            CudaText
+version         1.133.5
+architecture    x86_64
+
+summary         "CudaText: the Cross Platform code and text editor"
+description     ""
+packager        "Roired <roired.dev@outlook.com>"
+vendor          "Alexey-T"
+
+copyrights      "Alexey-T"
+licenses        "Mozilla Public License 2.0"
+
+provides {
+    CudaText=1.133.5
+}
+
+requires {
+    python>=python36
+}
