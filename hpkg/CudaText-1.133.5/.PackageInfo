@@ -1,5 +1,5 @@
 name            CudaText
-version         1.133.5
+version         1.133-5
 architecture    x86_64
 
 summary         "CudaText: the Cross Platform code and text editor"
@@ -8,10 +8,10 @@ packager        "Roired <roired.dev@outlook.com>"
 vendor          "Alexey-T"
 
 copyrights      "Alexey-T"
-licenses        "Mozilla Public License 2.0"
+licenses        "MPL v2.0"
 
 provides {
-    CudaText=1.133.5
+    CudaText=1.133-5
 }
 
 requires {
