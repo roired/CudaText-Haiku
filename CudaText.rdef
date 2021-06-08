@@ -34,7 +34,7 @@ resource app_version {
 	variety = B_APPV_BETA,
 	internal = 0,
 
-	short_info = "CudaText, the Cross Platform text editor",
+	short_info = "CudaText, the Cross Platform text and code editor",
 	long_info = "CudaText is a cross-platform text editor, written in Object Pascal. It is open source project and can be used free of charge, even for business. It starts quite fast: ~0.3 sec with ~30 plugins, on Linux on CPU Intel Core i3 3Hz. It is extensible by Python add-ons: plugins, linters, code tree parsers, external tools. Syntax parser is feature-rich, based on EControl engine (though not as fast as in some competitors). \n \n Features \n * Syntax highlight for lot of languages (250+ lexers). \n * Code tree: structure of functions/classes/etc, if lexer allows it. \n * Code folding. \n * Multi-carets and multi-selections. \n * Find/Replace with regular expressions. \n * Configs in JSON format. Including lexer-specific configs. \n * Tabbed UI. \n * Split view to primary/secondary. Split window to 2/3/4/6 groups of tabs. \n * Command palette, with fuzzy matching. \n * Minimap. Micromap. \n * Show unprinted whitespace. \n * Support for many encodings. \n * Customizable hotkeys. \n * Binary/Hex viewer for files of unlimited size (can show 10 Gb logs). \n * Correctly saves binary files."
 };
 
