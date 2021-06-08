@@ -10,7 +10,7 @@ Files placed here:
 - Folder 'files' holds the needed files to run CudaText on Haiku
 - Folder 'hpkg' holds the files needed to create the Haiku package
 
-File/folder structure
+## File/folder structure
 CudaText already sets the 'config' folder in the right place on Haiku, that is, in /boot/home/config/settings/cudatext.
 
 In that location, the following folders should be added:
