@@ -1,0 +1,176 @@
+object fmCharmaps: TfmCharmaps
+  Left = 481
+  Height = 523
+  Top = 210
+  Width = 516
+  ActiveControl = Grid
+  BorderIcons = [biSystemMenu]
+  Caption = 'Char map'
+  ClientHeight = 523
+  ClientWidth = 516
+  Constraints.MinHeight = 440
+  Constraints.MinWidth = 450
+  KeyPreview = True
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  Position = poMainFormCenter
+  ShowInTaskBar = stNever
+  LCLVersion = '2.1.0.0'
+  object Grid: TStringGrid
+    Left = 6
+    Height = 430
+    Top = 6
+    Width = 504
+    Align = alClient
+    AutoEdit = False
+    BorderSpacing.Around = 6
+    DefaultDrawing = False
+    DefaultRowHeight = 24
+    ExtendedSelect = False
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goDrawFocusSelected, goThumbTracking, goSmoothScroll]
+    RowCount = 17
+    TabOrder = 0
+    OnMouseDown = GridMouseDown
+    OnMouseMove = GridMouseMove
+    OnSelectCell = GridSelectCell
+  end
+  object PanelInfo: TATPanelSimple
+    Left = 0
+    Height = 39
+    Top = 442
+    Width = 516
+    Align = alBottom
+    object comboUnicode: TComboBox
+      AnchorSideLeft.Control = PanelInfo
+      AnchorSideTop.Control = PanelInfo
+      AnchorSideRight.Control = PanelInfo
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = PanelInfo
+      AnchorSideBottom.Side = asrBottom
+      Left = 6
+      Height = 31
+      Top = 2
+      Width = 330
+      Anchors = [akLeft, akBottom]
+      BorderSpacing.Around = 6
+      DropDownCount = 30
+      ItemHeight = 0
+      OnChange = comboUnicodeChange
+      Style = csDropDownList
+      TabOrder = 0
+    end
+    object comboAnsi: TComboBox
+      AnchorSideBottom.Control = PanelInfo
+      AnchorSideBottom.Side = asrBottom
+      Left = 6
+      Height = 27
+      Top = 6
+      Width = 330
+      Anchors = [akLeft, akBottom]
+      BorderSpacing.Around = 6
+      DropDownCount = 30
+      ItemHeight = 0
+      ItemIndex = 0
+      Items.Strings = (
+        'cp1250 - Central and East European Latin'
+        'cp1251 - Cyrillic'
+        'cp1252 - West European Latin'
+        'cp1253 - Greek'
+        'cp1254 - Turkish'
+        'cp1255 - Hebrew'
+        'cp1256 - Arabic'
+        'cp1257 - Baltic'
+        'cp1258 - Vietnamese'
+        'cp437 - Original IBM PC hardware'
+        'cp850 - Latin-1'
+        'cp852 - Latin-2'
+        'cp866 - Belarusian, Russian, Ukrainian'
+      )
+      OnChange = comboAnsiChange
+      Style = csDropDownList
+      TabOrder = 1
+      Text = 'cp1250 - Central and East European Latin'
+    end
+    object chkHexTitle: TCheckBox
+      AnchorSideTop.Control = PanelInfo
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = PanelInfo
+      AnchorSideRight.Side = asrBottom
+      Left = 420
+      Height = 24
+      Top = 7
+      Width = 90
+      Anchors = [akTop, akRight]
+      BorderSpacing.Right = 6
+      Caption = 'Hex titles'
+      OnChange = chkHexTitleChange
+      TabOrder = 2
+    end
+  end
+  object PanelBtm: TATPanelSimple
+    Left = 0
+    Height = 42
+    Top = 481
+    Width = 516
+    Align = alBottom
+    object btnClose: TButton
+      AnchorSideRight.Control = PanelBtm
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = PanelBtm
+      AnchorSideBottom.Side = asrBottom
+      Left = 430
+      Height = 29
+      Top = 7
+      Width = 80
+      Anchors = [akRight, akBottom]
+      AutoSize = True
+      BorderSpacing.Around = 6
+      Caption = 'Close'
+      Constraints.MinWidth = 80
+      OnClick = btnCloseClick
+      TabOrder = 2
+    end
+    object LabelInfo: TLabel
+      AnchorSideTop.Control = btnAnsi
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 17
+      Top = 13
+      Width = 12
+      Caption = '---'
+      ParentColor = False
+    end
+    object btnAnsi: TButton
+      AnchorSideRight.Control = btnUnicode
+      AnchorSideBottom.Control = PanelBtm
+      AnchorSideBottom.Side = asrBottom
+      Left = 276
+      Height = 29
+      Top = 7
+      Width = 60
+      Anchors = [akRight, akBottom]
+      AutoSize = True
+      BorderSpacing.Around = 6
+      Caption = '&1: ANSI'
+      OnClick = btnAnsiClick
+      TabOrder = 0
+    end
+    object btnUnicode: TButton
+      AnchorSideRight.Control = btnClose
+      AnchorSideBottom.Control = PanelBtm
+      AnchorSideBottom.Side = asrBottom
+      Left = 342
+      Height = 29
+      Top = 7
+      Width = 82
+      Anchors = [akRight, akBottom]
+      AutoSize = True
+      BorderSpacing.Around = 6
+      Caption = '&2: Unicode'
+      OnClick = btnUnicodeClick
+      TabOrder = 1
+    end
+  end
+end

@@ -1,0 +1,137 @@
+object SyntAnal8: TLibSyntAnalyzer
+  Formats = <
+    item
+      DisplayName = 'Section'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clPurple
+      Font.Height = -13
+      Font.Name = 'Courier New'
+      Font.Style = []
+    end
+    item
+      DisplayName = 'Key'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -13
+      Font.Name = 'Courier New'
+      Font.Style = []
+    end
+    item
+      DisplayName = 'Value'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Courier New'
+      Font.Style = []
+    end
+    item
+      DisplayName = 'Symbol'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+    end
+    item
+      DisplayName = 'Comment'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Courier New'
+      Font.Style = [fsItalic]
+    end>
+  TokenRules = <
+    item
+      DisplayName = 'Comment'
+      StyleName = 'Comment'
+      TokenType = 1
+      Expression = '^[;\#].*'
+      ColumnFrom = 0
+      ColumnTo = 0
+    end
+    item
+      DisplayName = 'Section'
+      StyleName = 'Section'
+      TokenType = 5
+      Expression = '^\[.+?\]'
+      ColumnFrom = 0
+      ColumnTo = 0
+    end
+    item
+      DisplayName = 'Key'
+      StyleName = 'Key'
+      TokenType = 2
+      Expression = '^(.+?)(?=\=)'
+      ColumnFrom = 0
+      ColumnTo = 0
+    end
+    item
+      DisplayName = 'Symbol'
+      StyleName = 'Symbol'
+      TokenType = 3
+      Expression = '='
+      ColumnFrom = 0
+      ColumnTo = 0
+    end
+    item
+      DisplayName = 'Value'
+      StyleName = 'Value'
+      TokenType = 4
+      Expression = '.+'
+      ColumnFrom = 0
+      ColumnTo = 0
+    end>
+  BlockRules = <
+    item
+      DisplayName = 'Section'
+      ConditionList = <
+        item
+          TokenTypes = 32
+        end>
+      EndOfTextClose = True
+      NameFmt = '%s0'
+      HighlightPos = cpBound
+      CollapseFmt = '%s0'
+      SelfClose = True
+      TreeItemStyle = 'Section'
+      IgnoreAsParent = False
+    end
+    item
+      DisplayName = 'Item'
+      ConditionList = <
+        item
+          TokenTypes = 8
+        end
+        item
+          TokenTypes = 4
+        end>
+      NotCollapsed = True
+      NameFmt = '%s0'
+      RefToCondEnd = True
+      HighlightPos = cpAny
+      NoEndRule = True
+      IgnoreAsParent = False
+    end>
+  CodeTemplates = <>
+  SubAnalyzers = <>
+  SampleText.Strings = (
+    ';Cmt'
+    '#Cmt'
+    '[seciton]'
+    'aa=test=val'
+    'bb=#test'
+    'Incorrect')
+  TokenTypeNames.Strings = (
+    'Unknown'
+    'Comment'
+    'Key'
+    'Symbol'
+    'Value'
+    'Section')
+  Extentions = 'ini dsk dti dof inf lng srv reg sas cfg desktop'
+  LexerName = 'Ini files'
+  Notes.Strings = (
+    'Alexey (CudaText)')
+  LineComment = ';'
+  Charset = DEFAULT_CHARSET
+end

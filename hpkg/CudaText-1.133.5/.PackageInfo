@@ -1,9 +1,9 @@
 name            CudaText
-version         1.133-5
+version         1.133.5-1
 architecture    x86_64
 
 summary         "CudaText: the Cross Platform code and text editor"
-description     ""
+description     "CudaText: the Cros Platform code and text editor"
 packager        "Roired <roired.dev@outlook.com>"
 vendor          "Alexey-T"
 
@@ -11,9 +11,18 @@ copyrights      "Alexey-T"
 licenses        "MPL v2.0"
 
 provides {
-    CudaText=1.133-5
+    CudaText=1.133.5-1
+    app:CudaText 
 }
 
 requires {
-    python>=python36
+    lib:libpython3.6m
+}
+
+urls {
+    "https://cudatext.github.io/"
+}
+
+source-urls {
+    "https://github.com/Alexey-T/CudaText"
 }
