@@ -1,0 +1,12 @@
+[info]
+title=New File
+desc=Suggests to create new file from templates in folder data/newdoc
+type=cudatext-plugin
+subdir=cuda_new_file
+homepage=
+
+[item1]
+section=commands
+caption=New File
+method=menu
+menu=0

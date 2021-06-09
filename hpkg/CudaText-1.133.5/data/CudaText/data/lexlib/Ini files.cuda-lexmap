@@ -1,0 +1,10 @@
+[comments]
+styles_cmt=Comment
+styles_str=
+
+[map]
+Section=Label
+Key=Id1
+Value=Id
+Symbol=Symbol
+Comment=Comment
