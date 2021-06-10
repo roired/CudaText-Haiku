@@ -21,3 +21,9 @@ In that location, the following folders should be added:
 - settings_default
 
 NOTE: need to certify this and check which other files/folders should be added there
+
+
+![CudaText Package](/cudatexthpkg.png)
+
+![CudaText Software](/cudatext.png)
+

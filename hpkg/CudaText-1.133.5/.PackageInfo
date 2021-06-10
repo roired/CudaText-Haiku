@@ -1,9 +1,28 @@
 name            CudaText
-version         1.133.5-1
+version         1.133.5-2
 architecture    x86_64
 
 summary         "CudaText: the Cross Platform code and text editor"
-description     "CudaText: the Cros Platform code and text editor"
+description     "CudaText is a cross-platform text editor, written in Object Pascal. It is open source project and can be used free of charge, even for business. It starts quite fast: ~0.3 sec with ~30 plugins, on Linux on CPU Intel Core i3 3Hz. It is extensible by Python add-ons: plugins, linters, code tree parsers, external tools. Syntax parser is feature-rich, based on EControl engine (though not as fast as in some competitors).
+
+Features
+
+Syntax highlight for lot of languages (250+ lexers).
+Code tree: structure of functions/classes/etc, if lexer allows it.
+Code folding.
+Multi-carets and multi-selections.
+Find/Replace with regular expressions.
+Configs in JSON format. Including lexer-specific configs.
+Tabbed UI.
+Split view to primary/secondary. Split window to 2/3/4/6 groups of tabs.
+Command palette, with fuzzy matching.
+Minimap. Micromap.
+Show unprinted whitespace.
+Support for many encodings.
+Customizable hotkeys.
+Binary/Hex viewer for files of unlimited size (can show 10 Gb logs).
+Correctly saves binary files."
+
 packager        "Roired <roired.dev@outlook.com>"
 vendor          "Alexey-T"
 
@@ -11,12 +30,13 @@ copyrights      "Alexey-T"
 licenses        "MPL v2.0"
 
 provides {
-    CudaText=1.133.5-1
+    CudaText=1.133.5-2
     app:CudaText 
 }
 
 requires {
     lib:libpython3.6m
+    qt5
 }
 
 urls {
@@ -25,4 +45,8 @@ urls {
 
 source-urls {
     "https://github.com/Alexey-T/CudaText"
+}
+
+post-install-scripts {
+    "boot/post-install/setup-cudatext.sh"
 }
