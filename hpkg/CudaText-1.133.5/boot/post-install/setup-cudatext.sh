@@ -12,3 +12,12 @@ cat > $file <<EOF
 EOF
 
 chmod -R +rw /boot/home/config/settings/cudatext
+
+
+# checkout links for libqt5pas
+lpas=$(find /boot/system/lib/libQt5Pas.so.1.2.?)
+
+ln -s $lpas /boot/system/lib/libQt5Pas.so
+ln -s $lpas /boot/system/lib/libQt5Pas.so.1
+ln -s $lpas /boot/system/lib/libQt5Pas.so.1.2
+
