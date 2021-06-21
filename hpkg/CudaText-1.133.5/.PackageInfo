@@ -1,5 +1,5 @@
 name            CudaText
-version         1.133.5-2
+version         1.133.5-3
 architecture    x86_64
 
 summary         "CudaText: the Cross Platform code and text editor"
@@ -30,12 +30,13 @@ copyrights      "Alexey-T"
 licenses        "MPL v2.0"
 
 provides {
-    CudaText=1.133.5-2
+    CudaText=1.133.5-3
     app:CudaText 
 }
 
 requires {
     lib:libpython3.6m
+    lib:libqt5pas
     qt5
 }
 
