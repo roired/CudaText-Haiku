@@ -14,7 +14,7 @@ resource app_signature "application/x-vnd.Alexey-T.CudaText";
 
 	B_SINGLE_LAUNCH is the normal OS behavior
 --------------------------------------------------------------------*/
-/*resource app_flags B_SINGLE_LAUNCH | B_ARGV_ONLY;*/
+resource app_flags B_SINGLE_LAUNCH;
 
 resource("QT:QPA_FLAGS") "Q_REF_TO_ARGV|Q_REF_TO_FORK";
 
