@@ -2,5 +2,5 @@
 
 This is the CudaText executable for Haiku 64bit and the files that need to be added into the /boot/config/settings/cudatext folder when making the package
 
-The file 'default.json' has a new line added in order to include the Python lib in the default CudaText HPKG (lines 1161 and 1162), to default to Python 3.6m.
-(Need to think about this?)
+This new version 1.133.7-1 has already included Python support added by Alextey-T.
+Thanks to Begasus, now it's not needed to package libQt5Pas with the HPKG as it's already provided by Haikuports, thus when installing the CudaText HPKG it pulls the needed requirements.
