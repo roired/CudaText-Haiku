@@ -16,6 +16,12 @@ resource app_signature "application/x-vnd.Alexey-T.CudaText";
 --------------------------------------------------------------------*/
 resource app_flags B_SINGLE_LAUNCH;
 
+/*------Added by RR---------------------------------------------------
+    This line tells the OS to open CudaText and load a file
+    when double clicking on a proper file
+    As CudaText is Qt software, need to add this args
+    to properly manage double click open
+--------------------------------------------------------------------*/
 resource("QT:QPA_FLAGS") "Q_REF_TO_ARGV|Q_REF_TO_FORK";
 
 /*--------------------------------------------------------------------
@@ -29,6 +35,10 @@ resource("QT:QPA_FLAGS") "Q_REF_TO_ARGV|Q_REF_TO_FORK";
 	B_APPV_FINAL
 --------------------------------------------------------------------*/
 
+/*------Added by RR---------------------------------------------------
+    This block here has the purpose of telling the CudaText
+    executable the type of files that is 'capable' of opening
+--------------------------------------------------------------------*/
 resource file_types message {
 	"types" = "text/plain",
 	"types" = "text/x-source-code",
@@ -43,8 +53,8 @@ resource file_types message {
 
 resource app_version {
 	major  = 1,
-	middle = 133,
-	minor  = 7,
+	middle = 146,
+	minor  = 2,
 
 	variety = B_APPV_GAMMA,
 	internal = 1,
